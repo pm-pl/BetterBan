@@ -21,18 +21,41 @@
 
 declare(strict_types=1);
 
-namespace supercrafter333\BetterBan\libs\_cf7646b211ed2991\dktapps\pmforms\element;
+namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms\element;
 
-class StepSlider extends BaseSelector{
+use pocketmine\form\FormValidationException;
+use function gettype;
+use function is_bool;
+
+/**
+ * Represents a UI on/off switch. The switch may have a default value.
+ */
+class Toggle extends CustomFormElement{
+	/** @var bool */
+	private $default;
+
+	public function __construct(string $name, string $text, bool $defaultValue = false){
+		parent::__construct($name, $text);
+		$this->default = $defaultValue;
+	}
 
 	public function getType() : string{
-		return "step_slider";
+		return "toggle";
+	}
+
+	public function getDefaultValue() : bool{
+		return $this->default;
+	}
+
+	public function validateValue($value) : void{
+		if(!is_bool($value)){
+			throw new FormValidationException("Expected bool, got " . gettype($value));
+		}
 	}
 
 	protected function serializeElementData() : array{
 		return [
-			"steps" => $this->options,
-			"default" => $this->defaultOptionIndex
+			"default" => $this->default
 		];
 	}
 }

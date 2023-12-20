@@ -24,7 +24,7 @@ declare(strict_types=1);
 /**
  * API for Minecraft: Bedrock custom UI (forms)
  */
-namespace supercrafter333\BetterBan\libs\_cf7646b211ed2991\dktapps\pmforms;
+namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms;
 
 use pocketmine\form\Form;
 

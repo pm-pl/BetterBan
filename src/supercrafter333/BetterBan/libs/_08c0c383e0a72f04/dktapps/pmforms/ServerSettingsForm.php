@@ -21,7 +21,7 @@
 
 declare(strict_types=1);
 
-namespace supercrafter333\BetterBan\libs\_cf7646b211ed2991\dktapps\pmforms;
+namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms;
 
 /**
  * Represents a custom form which can be shown in the Settings menu on the client. This is exactly the same as a regular

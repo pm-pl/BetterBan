@@ -21,7 +21,7 @@
 
 declare(strict_types=1);
 
-namespace supercrafter333\BetterBan\libs\_cf7646b211ed2991\dktapps\pmforms;
+namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms;
 
 /**
  * Represents an option on a MenuForm. The option is shown as a button and may optionally have an image next to it.

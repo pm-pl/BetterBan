@@ -21,9 +21,9 @@
 
 declare(strict_types=1);
 
-namespace supercrafter333\BetterBan\libs\_cf7646b211ed2991\dktapps\pmforms;
+namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms;
 
-use supercrafter333\BetterBan\libs\_cf7646b211ed2991\dktapps\pmforms\element\CustomFormElement;
+use supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms\element\CustomFormElement;
 use pocketmine\form\FormValidationException;
 use pocketmine\player\Player;
 use pocketmine\utils\Utils;
