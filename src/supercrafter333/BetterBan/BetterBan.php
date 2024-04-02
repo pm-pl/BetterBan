@@ -35,7 +35,7 @@ use CortexPE\DiscordWebhookAPI\Message;
 use CortexPE\DiscordWebhookAPI\Webhook;
 use DateInterval;
 use DateTime;
-use supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms\BaseForm;
+use supercrafter333\BetterBan\libs\_f6a55e2e333f5183\dktapps\pmforms\BaseForm;
 use Exception;
 use pocketmine\permission\PermissionManager;
 use pocketmine\plugin\PluginBase;
@@ -79,20 +79,12 @@ class BetterBan extends PluginBase {
 	public const VERSION = "4.2.2";
 
 
-	/**
-	 * @var null
-	 */
+
 	public static $DISCORD_WEBHOOK_URL = null;
 
-	/**
-	 * @var MySQLBanList
-	 */
 	private MySQLBanList $mysqlBanByName;
 
-	/**
-	 * @var MySQLBanList
-	 */
-	private MySQLBanList $mysqlBanByIP;
+    private MySQLBanList $mysqlBanByIP;
 
 	/**
 	 * On Plugin Loading
@@ -186,7 +178,7 @@ class BetterBan extends PluginBase {
 	/**
 	 * Check user if it is currently banned.
 	 * @param string $name
-	 * 
+	 *
 	 * @return bool
 	 */
 	public static function isBanned(string $name) : bool {
@@ -201,7 +193,7 @@ class BetterBan extends PluginBase {
 	/**
 	 * Check user if their ip is currently banned.
 	 * @param string $ip
-	 * 
+	 *
 	 * @return bool
 	 */
 	public static function isBannedIp(string $ip) : bool {
@@ -217,7 +209,7 @@ class BetterBan extends PluginBase {
 	 * @return bool
 	 */
 	public static function pmformsExists() : bool {
-		return class_exists(\supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms\BaseForm::class);
+		return class_exists(\supercrafter333\BetterBan\libs\_f6a55e2e333f5183\dktapps\pmforms\BaseForm::class);
 	}
 
 	/**
@@ -230,7 +222,7 @@ class BetterBan extends PluginBase {
 
 	/**
 	 * @param bool $update
-	 * 
+	 *
 	 * @return void
 	 */
 	private function versionCheck(bool $update = true) : void{
@@ -292,7 +284,7 @@ class BetterBan extends PluginBase {
 	/**
 	 * Add banned user to BanLog.
 	 * @param string $playerName
-	 * 
+	 *
 	 * @return void
 	 */
 	public function addBanToBanlog(string $playerName) : void{
@@ -309,7 +301,7 @@ class BetterBan extends PluginBase {
 	/**
 	 * Gets the information of the user on BanLog.
 	 * @param string $playerName
-	 * 
+	 *
 	 * @return int
 	 */
 	public function getBanLogOf(string $playerName) : int {
@@ -369,9 +361,9 @@ class BetterBan extends PluginBase {
 	 * Add time and Convert string to new datetime
 	 * @param string $string
 	 * @param DateTime $time
-	 * 
+	 *
 	 * @throws Exception
-	 * 
+	 *
 	 * @return array|null
 	 */
 	public function stringToTimestampAdd(string $string, DateTime $time) : ?array {
@@ -473,7 +465,7 @@ class BetterBan extends PluginBase {
 	 * DateTime::diff()->format() is suitable creating date format.
 	 * @param DateTime $duration
 	 * @param bool $legacy
-	 * 
+	 *
 	 * @return string
 	 */
 	public function toPrettyFormat(DateTime $duration, bool $legacy = false) : string {
@@ -518,7 +510,7 @@ class BetterBan extends PluginBase {
 	 * @param string $banned
 	 * @param string $source
 	 * @param string $reason
-	 * 
+	 *
 	 * @return void
 	 */
 	public function sendBanMessageToDC(string $banned, string $source, string $reason) : void{
@@ -541,7 +533,7 @@ class BetterBan extends PluginBase {
 
 	/**
 	 * @param string $banned
-	 * 
+	 *
 	 * @return void
 	 */
 	public function sendBanUpdatedMessageToDC(string $banned) : void {
@@ -565,7 +557,7 @@ class BetterBan extends PluginBase {
 	/**
 	 * @param string $target
 	 * @param string $source
-	 * 
+	 *
 	 * @return void
 	 */
 	public function sendPardonMessageToDC(string $target, string $source) : void{
@@ -590,7 +582,7 @@ class BetterBan extends PluginBase {
 	 * @param string $ip
 	 * @param string $source
 	 * @param string $reason
-	 * 
+	 *
 	 * @return void
 	 */
 	public function sendIpBanMessageToDC(string $ip, string $source, string $reason) : void{
@@ -613,7 +605,7 @@ class BetterBan extends PluginBase {
 
 	/**
 	 * @param string $ip
-	 * 
+	 *
 	 * @return void
 	 */
 	public function sendIpBanUpdatedMessageToDC(string $ip) : void{
@@ -637,7 +629,7 @@ class BetterBan extends PluginBase {
 	/**
 	 * @param string $ip
 	 * @param string $source
-	 * 
+	 *
 	 * @return void
 	 */
 	public function sendPardonIpMessageToDC(string $ip, string $source) : void{
@@ -661,7 +653,7 @@ class BetterBan extends PluginBase {
 	/**
 	 * @param string $target
 	 * @param string $source
-	 * 
+	 *
 	 * @return void
 	 */
 	public function sendKickMessageToDC(string $target, string $source) : void{

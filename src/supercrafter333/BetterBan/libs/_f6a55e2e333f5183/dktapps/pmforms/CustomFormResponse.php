@@ -21,7 +21,7 @@
 
 declare(strict_types=1);
 
-namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms;
+namespace supercrafter333\BetterBan\libs\_f6a55e2e333f5183\dktapps\pmforms;
 
 /**
  * @phpstan-type ResponseData array<string, mixed>

@@ -77,7 +77,7 @@ class BBBanEvent extends Event implements Cancellable {
 	/**
 	 * Set the Target Player-Name of the Ban
 	 * @param string $target
-	 * 
+	 *
 	 * @return void
 	 */
 	public function setTarget(string $target) : void {
@@ -87,7 +87,7 @@ class BBBanEvent extends Event implements Cancellable {
 	/**
 	 * Set the Source Player-Name of the Ban
 	 * @param string $source
-	 * 
+	 *
 	 * @return void
 	 */
 	public function setSource(string $source) : void {
@@ -97,7 +97,7 @@ class BBBanEvent extends Event implements Cancellable {
 	/**
 	 * Set the Reason of the Ban
 	 * @param string|null $reason
-	 * 
+	 *
 	 * @return void
 	 */
 	public function setReason(string $reason = null) : void {
@@ -109,7 +109,7 @@ class BBBanEvent extends Event implements Cancellable {
 	 * @return void
 	 */
 	public function sendDiscordWebhookMessage() : void {
-		$reason = $this->reason === null ?? "";
+        $reason = $this->reason === null ? "" : $this->reason;
 		BetterBan::getInstance()->sendBanMessageToDC($this->target, $this->source, $reason);
 	}
 }

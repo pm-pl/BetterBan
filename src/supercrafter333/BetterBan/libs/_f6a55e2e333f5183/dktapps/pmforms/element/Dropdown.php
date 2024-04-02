@@ -21,17 +21,17 @@
 
 declare(strict_types=1);
 
-namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms\element;
+namespace supercrafter333\BetterBan\libs\_f6a55e2e333f5183\dktapps\pmforms\element;
 
-class StepSlider extends BaseSelector{
+class Dropdown extends BaseSelector{
 
 	public function getType() : string{
-		return "step_slider";
+		return "dropdown";
 	}
 
 	protected function serializeElementData() : array{
 		return [
-			"steps" => $this->options,
+			"options" => $this->options,
 			"default" => $this->defaultOptionIndex
 		];
 	}

@@ -21,18 +21,24 @@
 
 declare(strict_types=1);
 
-namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\dktapps\pmforms\element;
+namespace supercrafter333\BetterBan\libs\_f6a55e2e333f5183\dktapps\pmforms\element;
 
-class Dropdown extends BaseSelector{
+use function assert;
+
+/**
+ * Element which displays some text on a form.
+ */
+class Label extends CustomFormElement{
 
 	public function getType() : string{
-		return "dropdown";
+		return "label";
+	}
+
+	public function validateValue($value) : void{
+		assert($value === null);
 	}
 
 	protected function serializeElementData() : array{
-		return [
-			"options" => $this->options,
-			"default" => $this->defaultOptionIndex
-		];
+		return [];
 	}
 }

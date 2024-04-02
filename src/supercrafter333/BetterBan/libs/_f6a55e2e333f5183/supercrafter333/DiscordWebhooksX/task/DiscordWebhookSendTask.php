@@ -26,11 +26,11 @@
 
 declare(strict_types = 1);
 
-namespace supercrafter333\BetterBan\libs\_08c0c383e0a72f04\supercrafter333\DiscordWebhooksX\task;
+namespace supercrafter333\BetterBan\libs\_f6a55e2e333f5183\supercrafter333\DiscordWebhooksX\task;
 
 
-use supercrafter333\BetterBan\libs\_08c0c383e0a72f04\supercrafter333\DiscordWebhooksX\Message;
-use supercrafter333\BetterBan\libs\_08c0c383e0a72f04\supercrafter333\DiscordWebhooksX\Webhook;
+use supercrafter333\BetterBan\libs\_f6a55e2e333f5183\supercrafter333\DiscordWebhooksX\Message;
+use supercrafter333\BetterBan\libs\_f6a55e2e333f5183\supercrafter333\DiscordWebhooksX\Webhook;
 use pocketmine\scheduler\AsyncTask;
 use pocketmine\Server;
 

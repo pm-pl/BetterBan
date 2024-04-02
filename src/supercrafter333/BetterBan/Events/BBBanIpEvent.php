@@ -77,7 +77,7 @@ class BBBanIpEvent extends Event implements Cancellable {
 	/**
 	 * Set the IpAddress Player-Name of the Ban
 	 * @param string $IpAddress
-	 * 
+	 *
 	 * @return void
 	 */
 	public function setIpAddress(string $IpAddress) : void {
@@ -87,7 +87,7 @@ class BBBanIpEvent extends Event implements Cancellable {
 	/**
 	 * Set the Source Player-Name of the Ban
 	 * @param string $source
-	 * 
+	 *
 	 * @return void
 	 */
 	public function setSource(string $source) : void {
@@ -97,7 +97,7 @@ class BBBanIpEvent extends Event implements Cancellable {
 	/**
 	 * Set the Reason of the Ban
 	 * @param string|null $reason
-	 * 
+	 *
 	 * @return void
 	 */
 	public function setReason(string $reason = null) : void {
@@ -109,7 +109,7 @@ class BBBanIpEvent extends Event implements Cancellable {
 	 * @return void
 	 */
 	public function sendDiscordWebhookMessage() : void {
-		$reason = $this->reason === null ?? "";
+		$reason = $this->reason === null ? "" : $this->reason;
 		BetterBan::getInstance()->sendIpBanMessageToDC($this->IpAddress, $this->source, $reason);
 	}
 }
